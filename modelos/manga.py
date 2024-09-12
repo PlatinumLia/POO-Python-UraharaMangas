@@ -1,16 +1,16 @@
 class Manga:
-    nome = "";
-    volumes = "";
-    ativo = False;
-    
-manga_bleach = Manga();
-manga_blackclover = Manga();
+    def __init__(self, nome, volumes):
+        self.nome = nome;
+        self.volumes = volumes;
+        self.ativo = False;
 
-manga_bleach.nome = "Bleach";
-manga_blackclover = "Black Clover";
+    def __str__(self):
+        return f'{self.nome} | {self.volumes} | {self.ativo}';
+
+manga_bleach = Manga("Bleach", "74");
+manga_blackclover = Manga("Black Clover", "36");
 
 mangas = [manga_bleach, manga_blackclover];
 
-print(mangas)
-print(manga_bleach)
-print(dir(manga_bleach))
+print(manga_bleach, "\n");
+print(manga_blackclover, "\n");
